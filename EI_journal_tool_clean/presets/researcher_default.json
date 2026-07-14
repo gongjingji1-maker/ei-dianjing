@@ -1,0 +1,48 @@
+{
+  "preset_name": "研究者发现默认配置",
+  "preset_description": "从目标期刊发现潜在合作研究者的默认配置：查询近3年文章，筛选发文>=2篇且h-index>=10的作者",
+  "version": "1.0",
+  "created_at": "2026-07-13",
+
+  "researcher_discovery": {
+    "target_journals": [],
+    "years": [2024, 2025, 2026],
+    "max_articles_per_journal": 100,
+
+    "filters": {
+      "min_articles_in_journal": 2,
+      "min_corresponding_count": 0,
+      "min_first_author_count": 0,
+      "institution_countries": [],
+      "exclude_institution_countries": [],
+      "research_keywords": [],
+      "min_h_index": 10,
+      "min_total_works": 20
+    },
+
+    "sort_by": {
+      "field": "article_count",
+      "order": "desc"
+    },
+
+    "output_format": "excel",
+    "output_columns": [
+      "Author Name",
+      "ORCID",
+      "OpenAlex ID",
+      "Current Institution",
+      "Institution Country",
+      "Institution Type",
+      "Articles in Target Journal",
+      "First Author Count",
+      "Corresponding Author Count",
+      "h-index",
+      "Total Works",
+      "Total Citations",
+      "Research Concepts",
+      "Recent Article Titles",
+      "Recent Article DOIs",
+      "Latest Article Date"
+    ]
+  }
+}

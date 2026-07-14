@@ -1,0 +1,71 @@
+{
+  "preset_name": "默认方案_英文期刊",
+  "preset_description": "基础筛选：Journal类型 + 排除中文语言，按出版商期刊数量降序排列",
+  "version": "1.0",
+  "created_at": "2026-07-13",
+
+  "base_filter": {
+    "sheet": "SERIALS",
+    "source_type": ["Journal"],
+    "exclude_language_keywords": ["CHINESE"]
+  },
+
+  "dimensional_filter": {
+    "publisher": {
+      "mode": "include",
+      "match_type": "fuzzy",
+      "values": []
+    },
+    "country_region": {
+      "mode": "include",
+      "match_type": "exact",
+      "values": []
+    },
+    "language": {
+      "mode": "include",
+      "match_type": "exact",
+      "values": []
+    },
+    "subject_1": {
+      "mode": "include",
+      "match_type": "fuzzy",
+      "values": []
+    },
+    "subject_all": {
+      "mode": "include",
+      "match_type": "fuzzy",
+      "values": []
+    }
+  },
+
+  "sorting": {
+    "primary": {
+      "field": "Publisher",
+      "order": "desc",
+      "sort_by": "count"
+    },
+    "secondary": {
+      "field": "Source title",
+      "order": "asc",
+      "sort_by": "alphabetical"
+    }
+  },
+
+  "output": {
+    "bilingual": true,
+    "include_subject_translation": true,
+    "include_title_translation": true,
+    "include_stats_sheet": true,
+    "freeze_header": true,
+    "alternate_row_color": true,
+    "column_widths": {
+      "Source title": 45,
+      "Source type": 12,
+      "ISSN": 12,
+      "EISSN": 12,
+      "Publisher": 35,
+      "Country/Region": 15,
+      "Language": 15
+    }
+  }
+}

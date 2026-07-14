@@ -1,0 +1,72 @@
+{
+  "preset_name": "能源工程方向",
+  "preset_description": "筛选能源工程与动力技术方向的英文期刊，覆盖可再生能源/电力/核能/燃料技术等子领域",
+  "version": "1.0",
+  "created_at": "2026-07-13",
+
+  "base_filter": {
+    "sheet": "SERIALS",
+    "source_type": ["Journal"],
+    "exclude_language_keywords": ["CHINESE"]
+  },
+
+  "dimensional_filter": {
+    "language": {
+      "mode": "include",
+      "match_type": "exact",
+      "values": ["ENGLISH"]
+    },
+    "subject_all": {
+      "mode": "include",
+      "match_type": "fuzzy",
+      "values": [
+        "Energy",
+        "Renewable Energy",
+        "Sustainability",
+        "Fuel Technology",
+        "Nuclear Energy",
+        "Energy Engineering and Power Technology",
+        "Electrical and Electronic Engineering",
+        "Energy (all)",
+        "Energy (miscellaneous)"
+      ]
+    },
+    "country_region": {
+      "mode": "include",
+      "match_type": "exact",
+      "values": [
+        "United States",
+        "United Kingdom",
+        "Netherlands",
+        "Germany",
+        "Switzerland",
+        "Japan",
+        "Singapore",
+        "Canada",
+        "Australia"
+      ]
+    }
+  },
+
+  "sorting": {
+    "primary": {
+      "field": "Publisher",
+      "order": "desc",
+      "sort_by": "count"
+    },
+    "secondary": {
+      "field": "Source title",
+      "order": "asc",
+      "sort_by": "alphabetical"
+    }
+  },
+
+  "output": {
+    "bilingual": true,
+    "include_subject_translation": true,
+    "include_title_translation": true,
+    "include_stats_sheet": true,
+    "freeze_header": true,
+    "alternate_row_color": true
+  }
+}

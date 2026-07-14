@@ -1,0 +1,62 @@
+{
+  "preset_name": "计算机与AI方向",
+  "preset_description": "筛选计算机科学和人工智能方向的英文期刊，覆盖AI/ML/数据挖掘/计算机视觉/网络/人机交互等子领域",
+  "version": "1.0",
+  "created_at": "2026-07-13",
+
+  "base_filter": {
+    "sheet": "SERIALS",
+    "source_type": ["Journal"],
+    "exclude_language_keywords": ["CHINESE"]
+  },
+
+  "dimensional_filter": {
+    "language": {
+      "mode": "include",
+      "match_type": "exact",
+      "values": ["ENGLISH"]
+    },
+    "subject_all": {
+      "mode": "include",
+      "match_type": "fuzzy",
+      "values": [
+        "Artificial Intelligence",
+        "Computer Science",
+        "Machine Learning",
+        "Data Mining",
+        "Pattern Recognition",
+        "Computer Vision",
+        "Information Systems",
+        "Software",
+        "Signal Processing",
+        "Computer Networks",
+        "Human-Computer Interaction",
+        "Computational Theory",
+        "Hardware and Architecture",
+        "Computer Graphics"
+      ]
+    }
+  },
+
+  "sorting": {
+    "primary": {
+      "field": "Publisher",
+      "order": "desc",
+      "sort_by": "count"
+    },
+    "secondary": {
+      "field": "Source title",
+      "order": "asc",
+      "sort_by": "alphabetical"
+    }
+  },
+
+  "output": {
+    "bilingual": true,
+    "include_subject_translation": true,
+    "include_title_translation": true,
+    "include_stats_sheet": true,
+    "freeze_header": true,
+    "alternate_row_color": true
+  }
+}
